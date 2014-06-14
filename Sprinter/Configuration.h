@@ -139,9 +139,9 @@ const bool max_software_endstops = true; //If true, axis won't move to coordinat
 //-----------------------------------------------------------------------
 //Max Length for Prusa Mendel, check the ways of your axis and set this Values
 //-----------------------------------------------------------------------
-const int X_MAX_LENGTH = 110;
-const int Y_MAX_LENGTH = 70;
-const int Z_MAX_LENGTH = 90;
+const int X_MAX_LENGTH = 200;
+const int Y_MAX_LENGTH = 200;
+const int Z_MAX_LENGTH = 100;
 
 //-----------------------------------------------------------------------
 //// MOVEMENT SETTINGS
@@ -182,7 +182,7 @@ const long min_time_before_dir_change = 30; //milliseconds
 //// Acceleration settings
 //-----------------------------------------------------------------------
 // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
-#define _ACCELERATION 500         // Axis Normal acceleration mm/s^2
+#define _ACCELERATION 1000         // Axis Normal acceleration mm/s^2
 #define _RETRACT_ACCELERATION 2000 // Extruder Normal acceleration mm/s^2
 #define _MAX_XY_JERK 20.0
 #define _MAX_Z_JERK 0.4
@@ -270,8 +270,8 @@ const int dropsegments=5; //everything with less than this number of steps will 
 //The result of this function is only send with the Temperaturerequest to the host
 //#define AUTOTEMP 
 #ifdef AUTOTEMP
-    #define AUTO_TEMP_MAX 250
-    #define AUTO_TEMP_MIN 230
+    #define AUTO_TEMP_MAX 235
+    #define AUTO_TEMP_MIN 225
     #define AUTO_TEMP_FACTOR 0.025
     #define AUTOTEMP_OLDWEIGHT 0.98
 #endif
